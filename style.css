@@ -1,0 +1,130 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body,html{
+    width: 100%;
+    height: 100%;
+}
+:root{
+    --bg-color:black;
+    --bg-primary-color:rgb(40, 39, 39);
+
+    --text-color:white;
+   
+
+     --pd-s:5px;
+     --pd-m:10px;
+     --pd-l:20px;
+     --pd-xl:30px;
+     --pd-xxl:40px;
+
+}
+.main{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+    background: var(--bg-color);
+    color: var(--text-color);
+    padding: 20px;
+
+}
+.main .right button{
+    padding: var(--pd-m) var(--pd-l);
+    font-weight: bold;
+    
+
+}
+
+.board{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    width: 100%;
+    height: calc(100vh - 100px);
+    background-color: var(--bg-color);
+}
+.box{
+    height: 100%;
+    width: 100%;
+
+    /* display: flex; */
+    justify-content: space-between;
+    border-radius: var(--pd-m);
+    gap: 10px;
+    margin: 10px;
+    margin-bottom: 25px;
+    background-color: var(--bg-primary-color);
+   color: var(--text-color);
+   padding: 10px;
+    flex: 1;
+   
+}
+.box-coloum{
+    display: flex;
+    justify-content: space-between;
+}
+.active{
+    border: 2px dotted white;
+
+}
+.tasks{
+    display: flex;
+    flex-direction: column;
+   border: 1px solid white;
+   background-color: var(--bg-color);
+   margin-top: 10px;
+   text-align: center;
+   border-radius: var(--pd-m);
+
+}
+.button{
+    display: flex;
+    justify-content: flex-end;
+    color: var(--text-color);
+    padding: var(--pd-l);
+    border: transparent;
+
+
+}
+.button button{
+    background-color: red;
+    padding: var(--pd-s) var(--pd-m);
+
+}
+
+.footer{
+    display: none;
+    height: 100%;
+    width: 100%;
+    
+    position: relative;
+    bottom: 100%;
+       backdrop-filter: blur(4px);
+}
+.taskbox{
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ flex-direction: column;
+ border: 2px solid black;
+ background-color: var(--bg-color);
+ gap: 10px;
+ position: relative;
+  position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: var(--pd-m);
+    padding: 20px;
+ box-sizing: border-box;
+}
+.taskbox input{
+    padding: var(--pd-m) var(--pd-l);
+    border-radius: var(--pd-m);
+
+}
